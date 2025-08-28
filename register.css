@@ -1,16 +1,101 @@
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      form {
-        width: 500px;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      input {
-        width: 100%;
-        margin: 10px 0;
-        padding: 10px;
-        box-sizing: border-box;
-      }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6a0dad, #9b30ff, #d8b4fe);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Form container */
+form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 370px;
+}
+
+/* Title */
+form h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+form input::placeholder {
+  color: #ddd;
+}
+
+form input:focus {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.02);
+}
+
+/* Button */
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #9b30ff;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #6a0dad;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(155,48,255,0.5);
+}
+
+/* Link */
+form a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #e0c3fc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+form a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
